@@ -12,6 +12,7 @@
   --title-decor-text-color: #000028;
   --main-title-color: #db00ff;
   --main-offset: 0.625rem;
+  --hover-accent-color: rgba(255, 0, 112, 0.4);
 }
 
 @media (768px <= width) {

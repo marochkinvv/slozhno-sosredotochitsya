@@ -15,6 +15,7 @@
   --main-title-color: #ffc2e6;
   --title-decor-back-color: #ff8dcb;
   --title-decor-text-color: #353430;
+  --hover-accent-color: rgba(50, 49, 45, 0.4);
   background-image: url(../images/cover-image-light.png);
 }
 
@@ -31,6 +32,7 @@
     --main-title-color: #ffc2e6;
     --title-decor-back-color: #ff8dcb;
     --title-decor-text-color: #353430;
+    --hover-accent-color: rgba(50, 49, 45, 0.4);
   }
 
   .page {

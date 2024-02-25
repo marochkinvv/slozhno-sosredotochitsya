@@ -18,7 +18,7 @@
 
 .header,
 .footer {
-  aspect-ratio: 1/1.78135 ;
+  aspect-ratio: 1/1.8347;
   position: relative;
 }
 
@@ -75,12 +75,24 @@
   min-block-size: 26px;
 }
 
+.header__theme-menu-item:hover {
+  outline: 1px solid var(--hover-accent-color);
+}
+
 .header__theme-menu-button {
   appearance: none;
   background-color: transparent;
   border: none;
   text-transform: lowercase;
   cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-item:has(:focus-visible) {
+  border-block-end: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
@@ -90,10 +102,14 @@
 .header__theme-menu-item:has(.header__theme-menu-button_active) {
   outline: 1px solid var(--accent-color);
 }
+.header__theme-menu-item:not(:has(.header__theme-menu-button_active)) {
+  cursor: pointer;
+}
 
 .header__title {
   inline-size: min-content;
   align-self: center;
+  position: relative;
 }
 
 .header__title.text-shadow {
@@ -129,7 +145,7 @@
   line-height: 139%;
   position: absolute;
   inset-block-start: var(--main-offset);
-  inset-inline-end: calc(var(--main-offset) + 0.625rem);
+  inset-inline-end: calc(var(--main-offset) + 0.575rem);
 }
 
 .header__icon::after {
@@ -210,13 +226,25 @@
   text-decoration: none;
 }
 
+.section__text-content__link:focus {
+  outline: none;
+}
+
+.section__text-content__link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.section__text-content__link:hover {
+  border-block-end: 1.5px solid var(--text-color);
+}
+
 .section__gallery {
   display: grid;
   gap: var(--main-offset);
 }
 
 .section__gallery__image {
-  width: 100%;
+  inline-size: 100%;
 }
 
 .footer {
@@ -250,7 +278,7 @@
 
   .header__title {
     inline-size: fit-content;
-    margin-inline-start: -1.25rem;
+    inset-inline-start: -1.25rem;
   }
 
   .header__title,
@@ -287,13 +315,13 @@
     block-size: 100%;
   }
 
-  .section__gallery__image:nth-child(1),
-  .section__gallery__image:nth-child(5) {
+  .section__gallery__item:nth-child(1),
+  .section__gallery__item:nth-child(5) {
     grid-column: span 2;
   }
 
-  .section__gallery__image:nth-child(2),
-  .section__gallery__image:nth-child(3) {
+  .section__gallery__item:nth-child(2),
+  .section__gallery__item:nth-child(3) {
     grid-row: span 2;
   }
 }
@@ -307,6 +335,7 @@
   .header__theme-menu {
     justify-self: center;
     align-self: start;
+    padding-block-start: var(--main-offset);
   }
 
   .header__theme-menu-list {
