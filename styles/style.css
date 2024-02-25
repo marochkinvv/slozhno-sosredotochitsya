@@ -18,7 +18,7 @@
 
 .header,
 .footer {
-  aspect-ratio: 1/1.8347;
+  aspect-ratio: 1/1.78135;
   position: relative;
 }
 
@@ -53,7 +53,8 @@
 
 .header__theme-menu {
   justify-self: end;
-  align-self: center;
+  align-self: end;
+  margin-block-end: 3.2rem;
 }
 
 .header__theme-menu-list {
@@ -126,12 +127,13 @@
 
 .header__text {
   justify-self: end;
-  align-self: center;
+  align-self: start;
   inline-size: min(100%, 355px);
   font-size: var(--font-size);
   font-family: var(--font-family);
   font-weight: 700;
   line-height: 130%;
+  margin-block-start: 2.5rem;
 }
 
 .header__icon {
@@ -243,7 +245,12 @@
   gap: var(--main-offset);
 }
 
+.section-picture {
+  gap: var(--main-offset);
+}
+
 .section__gallery__image {
+  display: block;
   inline-size: 100%;
 }
 
@@ -335,11 +342,16 @@
   .header__theme-menu {
     justify-self: center;
     align-self: start;
-    padding-block-start: var(--main-offset);
+    margin-block-start: var(--main-offset);
+    margin-block-end: unset;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+
+  .header__text {
+    margin-block-start: 3.2rem;
   }
 
   .section__text-content__text {
