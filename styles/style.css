@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  background-image: url(../images/cover-image-dark.png);
+  background-image: url(./images/cover-image-dark.png);
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -18,15 +18,13 @@
 
 .header,
 .footer {
-  aspect-ratio: 1/1.83467;
+  aspect-ratio: 1/1.78135 ;
   position: relative;
 }
 
 .header {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
-  padding-block-start: var(--main-offset);
-  padding-block-end: var(--main-offset);
 }
 
 .decorated-zone::before {
@@ -251,9 +249,13 @@
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     inline-size: fit-content;
     margin-inline-start: -1.25rem;
+  }
+
+  .header__title,
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 
   .header__text {
@@ -315,7 +317,15 @@
     letter-spacing: -0.1px;
   }
 
+  .section-what .section__title {
+    inline-size: 33.3333%;
+  }
+
   .section-what .section__text-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__title.text-shadow {
+    text-shadow: 2px 2px 0 #ff0070;
   }
 }
