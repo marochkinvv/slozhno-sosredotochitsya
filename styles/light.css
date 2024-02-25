@@ -37,7 +37,11 @@
     background-image: url(../images/cover-image-light.png);
   }
 
-  .header__icon {
+  .page .header__icon {
     display: none;
+  }
+
+  .page.theme_dark .header__icon {
+    display: flex;
   }
 }
