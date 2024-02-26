@@ -18,7 +18,7 @@
 
 .header,
 .footer {
-  aspect-ratio: 1/1.78135;
+  block-size: 100vh;
   position: relative;
 }
 
@@ -160,11 +160,6 @@
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
-.main,
-.footer {
-  background-color: var(--main-color);
-}
-
 .main {
   display: grid;
   padding-block-start: 2.5rem;
@@ -278,11 +273,6 @@
     padding-inline-end: 1.25rem;
   }
 
-  .header,
-  .footer {
-    aspect-ratio: 1/1.333333;
-  }
-
   .header__title {
     inline-size: fit-content;
     inset-inline-start: -1.25rem;
@@ -334,11 +324,6 @@
 }
 
 @media (1024px <= width) {
-  .header,
-  .footer {
-    aspect-ratio: 1.333333/1;
-  }
-
   .header__theme-menu {
     justify-self: center;
     align-self: start;
@@ -354,8 +339,9 @@
     margin-block-start: 3.2rem;
   }
 
-  .section__text-content__text {
-    letter-spacing: -0.1px;
+  .section-why,
+  .section-how {
+    grid-template-columns: 0.97fr 2fr;
   }
 
   .section-what .section__title {

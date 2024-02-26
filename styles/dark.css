@@ -19,27 +19,10 @@
   background-image: url(../images/cover-image-dark.png);
 }
 
-.header__icon {
-  display: flex;
+.page {
+  background-image: url(../images/cover-image-dark.png);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Дублируем переменные светлой темы */
-    --accent-color: #ff0070;
-    --main-color: #000028;
-    --text-color: #f1b2ce;
-    --title-decor-back-color: #ff0070;
-    --title-decor-text-color: #000028;
-    --main-title-color: #db00ff;
-    --hover-accent-color: rgba(255, 0, 112, 0.4);
-  }
-
-  .page {
-    background-image: url(../images/cover-image-dark.png);
-  }
-
-  .page.theme_light .header__icon {
-    display: none;
-  }
+.header__icon {
+  display: flex;
 }
